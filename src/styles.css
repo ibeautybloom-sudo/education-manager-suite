@@ -173,8 +173,8 @@
 .card-fx:hover { border-color: color-mix(in oklab, var(--primary) 40%, var(--border)); box-shadow: 0 20px 40px -18px color-mix(in oklab, var(--primary) 45%, transparent); }
 .card-fx.group::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, color-mix(in oklab, var(--primary) 12%, transparent) 50%, transparent 70%); transform: translateX(-100%); transition: transform .8s; pointer-events: none; }
 .card-fx.group:hover::before { transform: translateX(100%); }
-.row-fx { transition: background .25s, transform .25s; }
-.row-fx:hover { background: color-mix(in oklab, var(--accent) 70%, transparent); transform: translateX(4px); }
+.row-fx { transition: background .25s; }
+.row-fx:hover { background: color-mix(in oklab, var(--accent) 70%, transparent); }
 .shine { position: relative; overflow: hidden; }
 .shine::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--primary-foreground) 45%, transparent), transparent); transform: skewX(-20deg); animation: shine 3.2s infinite; }
 @keyframes shine { 0%, 60% { left: -60%; } 100% { left: 130%; } }
@@ -183,6 +183,5 @@
 @keyframes floaty { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(14px,-18px) rotate(6deg); } }
 [aria-hidden="true"] > * { animation: floaty 14s ease-in-out infinite; }
 [aria-hidden="true"] > *:nth-child(2n) { animation-duration: 18s; animation-direction: reverse; }
-nav a { transition: background .25s, transform .25s, color .25s; }
-nav a:hover { transform: translateX(3px); }
+nav a { transition: background .25s, color .25s, border-color .25s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
