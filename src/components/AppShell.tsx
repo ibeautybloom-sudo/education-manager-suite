@@ -232,8 +232,8 @@ export function ModulePage({ title, stats, panels }: { title: string; stats: [st
                 <XAxis dataKey="m" tickLine={false} axisLine={false} fontSize={12} stroke="var(--muted-foreground)" />
                 <YAxis tickLine={false} axisLine={false} fontSize={12} stroke="var(--muted-foreground)" />
                 <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid var(--border)", background: "var(--card)" }} />
-                <Area type="monotone" dataKey="b" stroke="var(--chart-2)" strokeWidth={2} fill="transparent" strokeDasharray="4 4" />
-                <Area animationDuration={1400} type="monotone" dataKey="a" stroke="var(--primary)" strokeWidth={2.5} fill="url(#ga)" />
+                <Area isAnimationActive={false} type="monotone" dataKey="b" stroke="var(--chart-2)" strokeWidth={2} fill="transparent" strokeDasharray="4 4" />
+                <Area isAnimationActive={false} type="monotone" dataKey="a" stroke="var(--primary)" strokeWidth={2.5} fill="url(#ga)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -266,7 +266,7 @@ export function ModulePage({ title, stats, panels }: { title: string; stats: [st
           <div className="relative mt-2 h-52">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie data={donut} dataKey="v" innerRadius={58} outerRadius={82} paddingAngle={3} stroke="none">
+                <Pie isAnimationActive={false} data={donut} dataKey="v" innerRadius={58} outerRadius={82} paddingAngle={3} stroke="none">
                   {donut.map((d) => <Cell key={d.n} fill={d.c} />)}
                 </Pie>
               </PieChart>

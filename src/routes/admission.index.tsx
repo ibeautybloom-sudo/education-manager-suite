@@ -128,7 +128,7 @@ function SalesDashboard() {
           <div className="h-72">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie data={outcomeData} dataKey="value" innerRadius={55} outerRadius={85} paddingAngle={3}>
+                <Pie isAnimationActive={false} data={outcomeData} dataKey="value" innerRadius={55} outerRadius={85} paddingAngle={3}>
                   {outcomeData.map((e, i) => <Cell key={i} fill={e.color} />)}
                 </Pie>
                 <Tooltip contentStyle={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: 8, fontSize: 12 }} />
@@ -187,8 +187,8 @@ function SalesDashboard() {
                 <XAxis dataKey="d" stroke="var(--color-muted-foreground)" fontSize={12} tickLine={false} axisLine={false} />
                 <YAxis stroke="var(--color-muted-foreground)" fontSize={12} tickLine={false} axisLine={false} />
                 <Tooltip contentStyle={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: 8, fontSize: 12 }} />
-                <Area type="monotone" dataKey="calls" stroke="var(--color-primary)" strokeWidth={2.5} fill="url(#cls)" />
-                <Area type="monotone" dataKey="sales" stroke="var(--color-success)" strokeWidth={2.5} fill="url(#sls)" />
+                <Area isAnimationActive={false} type="monotone" dataKey="calls" stroke="var(--color-primary)" strokeWidth={2.5} fill="url(#cls)" />
+                <Area isAnimationActive={false} type="monotone" dataKey="sales" stroke="var(--color-success)" strokeWidth={2.5} fill="url(#sls)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -204,7 +204,7 @@ function SalesDashboard() {
                 <XAxis dataKey="src" stroke="var(--color-muted-foreground)" fontSize={12} tickLine={false} axisLine={false} />
                 <YAxis stroke="var(--color-muted-foreground)" fontSize={12} tickLine={false} axisLine={false} />
                 <Tooltip contentStyle={{ background: "var(--color-card)", border: "1px solid var(--color-border)", borderRadius: 8, fontSize: 12 }} />
-                <Bar dataKey="n" radius={[6, 6, 0, 0]} fill="var(--color-primary)" />
+                <Bar isAnimationActive={false} dataKey="n" radius={[6, 6, 0, 0]} fill="var(--color-primary)" />
               </BarChart>
             </ResponsiveContainer>
           </div>
