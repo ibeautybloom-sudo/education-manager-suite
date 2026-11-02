@@ -170,7 +170,7 @@
 .page-in { animation: page-in .6s cubic-bezier(.2,.8,.2,1) both; }
 .fade-up { animation: page-in .7s cubic-bezier(.2,.8,.2,1) both; }
 .card-fx { transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s; }
-.card-fx:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--primary) 40%, var(--border)); box-shadow: 0 20px 40px -18px color-mix(in oklab, var(--primary) 45%, transparent); }
+.card-fx:hover { border-color: color-mix(in oklab, var(--primary) 40%, var(--border)); box-shadow: 0 20px 40px -18px color-mix(in oklab, var(--primary) 45%, transparent); }
 .card-fx.group::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, color-mix(in oklab, var(--primary) 12%, transparent) 50%, transparent 70%); transform: translateX(-100%); transition: transform .8s; pointer-events: none; }
 .card-fx.group:hover::before { transform: translateX(100%); }
 .row-fx { transition: background .25s, transform .25s; }

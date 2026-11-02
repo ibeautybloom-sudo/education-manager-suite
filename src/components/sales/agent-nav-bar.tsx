@@ -77,7 +77,7 @@ export function AgentNavBar() {
                     "size-14 rounded-full grid place-items-center text-sm font-bold ring-2 ring-offset-2 ring-offset-card transition",
                     active
                       ? "bg-primary text-primary-foreground ring-primary scale-105"
-                      : cn("bg-primary/10 text-primary", statusRing(a.status), "group-hover:scale-105"),
+                      : cn("bg-primary/10 text-primary", statusRing(a.status)),
                   )}
                 >
                   {initials}
