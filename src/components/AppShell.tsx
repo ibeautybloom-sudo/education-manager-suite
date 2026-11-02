@@ -127,7 +127,7 @@ export function AppShell({ title, children }: { title: string; children: ReactNo
             </div>
             <div className="flex gap-2">
               <button className="rounded-lg border bg-card px-4 py-2 text-sm font-semibold hover:bg-accent">Export</button>
-              <button className="shine flex items-center gap-1.5 rounded-lg bg-primary-gradient px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow transition hover:opacity-95">
+              <button className="flex items-center gap-1.5 rounded-lg bg-primary-gradient px-4 py-2 text-sm font-semibold text-primary-foreground shadow-glow transition hover:opacity-95">
                 <Plus className="size-4" />Create new
               </button>
             </div>
