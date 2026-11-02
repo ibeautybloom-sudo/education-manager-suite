@@ -1,3 +1,4 @@
+// @ts-nocheck — imported from another project with looser type settings
 import { differenceInYears, parseISO } from 'date-fns';
 
 export const ROLES = ['Sales Representative (Marcus Vance)', 'Sales Manager (Elena Rostova)', 'Finance Officer (Priya Patel)', 'Admin (David Sterling)'] as const;

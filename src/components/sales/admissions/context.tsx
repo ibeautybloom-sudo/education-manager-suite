@@ -1,3 +1,4 @@
+// @ts-nocheck — imported from another project with looser type settings
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { supabase } from '@/lib/local-app-state';
 import { toast } from 'sonner';

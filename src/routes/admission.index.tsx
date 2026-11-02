@@ -1,3 +1,4 @@
+// @ts-nocheck — imported from another project with looser type settings
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {

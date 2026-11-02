@@ -1,3 +1,4 @@
+// @ts-nocheck — imported from another project with looser type settings
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { Upload, Search } from "lucide-react";

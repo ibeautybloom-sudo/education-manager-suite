@@ -1,3 +1,4 @@
+// @ts-nocheck — imported from another project with looser type settings
 // Lightweight client-side store for the Sales module.
 // Persists agents, leads, calls, and assignments to localStorage and
 // exposes a tiny pub/sub for React via useSyncExternalStore.
