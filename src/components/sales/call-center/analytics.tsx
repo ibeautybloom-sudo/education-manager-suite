@@ -120,7 +120,7 @@ export function AnalyticsPage() {
                 <XAxis dataKey="label" fontSize={11} />
                 <YAxis fontSize={11} />
                 <Tooltip />
-                <Bar dataKey="count" fill="var(--color-chart-1)" radius={[6, 6, 0, 0]} />
+                <Bar isAnimationActive={false} dataKey="count" fill="var(--color-chart-1)" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -183,7 +183,7 @@ export function AnalyticsPage() {
               <YAxis fontSize={11} />
               <Tooltip />
               <Legend />
-              <Line type="monotone" dataKey="created" stroke="var(--color-chart-1)" name="Leads created" strokeWidth={2} />
+              <Line isAnimationActive={false} type="monotone" dataKey="created" stroke="var(--color-chart-1)" name="Leads created" strokeWidth={2} />
               
             </LineChart>
           </ResponsiveContainer>
