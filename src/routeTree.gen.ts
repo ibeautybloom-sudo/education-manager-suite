@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcademicRouteImport } from './routes/academic'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AdmissionRouteImport } from './routes/admission'
+import { Route as DirectorsRouteImport } from './routes/directors'
+import { Route as FinanceRouteImport } from './routes/finance'
+import { Route as HrRouteImport } from './routes/hr'
+import { Route as MarketingRouteImport } from './routes/marketing'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as WorkspaceRouteImport } from './routes/workspace'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcademicRoute = AcademicRouteImport.update({
+  id: '/academic',
+  path: '/academic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmissionRoute = AdmissionRouteImport.update({
+  id: '/admission',
+  path: '/admission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DirectorsRoute = DirectorsRouteImport.update({
+  id: '/directors',
+  path: '/directors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceRoute = FinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HrRoute = HrRouteImport.update({
+  id: '/hr',
+  path: '/hr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketingRoute = MarketingRouteImport.update({
+  id: '/marketing',
+  path: '/marketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkspaceRoute = WorkspaceRouteImport.update({
+  id: '/workspace',
+  path: '/workspace',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/academic': typeof AcademicRoute
+  '/admin': typeof AdminRoute
+  '/admission': typeof AdmissionRoute
+  '/directors': typeof DirectorsRoute
+  '/finance': typeof FinanceRoute
+  '/hr': typeof HrRoute
+  '/marketing': typeof MarketingRoute
+  '/settings': typeof SettingsRoute
+  '/workspace': typeof WorkspaceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/academic': typeof AcademicRoute
+  '/admin': typeof AdminRoute
+  '/admission': typeof AdmissionRoute
+  '/directors': typeof DirectorsRoute
+  '/finance': typeof FinanceRoute
+  '/hr': typeof HrRoute
+  '/marketing': typeof MarketingRoute
+  '/settings': typeof SettingsRoute
+  '/workspace': typeof WorkspaceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/academic': typeof AcademicRoute
+  '/admin': typeof AdminRoute
+  '/admission': typeof AdmissionRoute
+  '/directors': typeof DirectorsRoute
+  '/finance': typeof FinanceRoute
+  '/hr': typeof HrRoute
+  '/marketing': typeof MarketingRoute
+  '/settings': typeof SettingsRoute
+  '/workspace': typeof WorkspaceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/academic'
+    | '/admin'
+    | '/admission'
+    | '/directors'
+    | '/finance'
+    | '/hr'
+    | '/marketing'
+    | '/settings'
+    | '/workspace'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/academic'
+    | '/admin'
+    | '/admission'
+    | '/directors'
+    | '/finance'
+    | '/hr'
+    | '/marketing'
+    | '/settings'
+    | '/workspace'
+  id:
+    | '__root__'
+    | '/'
+    | '/academic'
+    | '/admin'
+    | '/admission'
+    | '/directors'
+    | '/finance'
+    | '/hr'
+    | '/marketing'
+    | '/settings'
+    | '/workspace'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcademicRoute: typeof AcademicRoute
+  AdminRoute: typeof AdminRoute
+  AdmissionRoute: typeof AdmissionRoute
+  DirectorsRoute: typeof DirectorsRoute
+  FinanceRoute: typeof FinanceRoute
+  HrRoute: typeof HrRoute
+  MarketingRoute: typeof MarketingRoute
+  SettingsRoute: typeof SettingsRoute
+  WorkspaceRoute: typeof WorkspaceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/academic': {
+      id: '/academic'
+      path: '/academic'
+      fullPath: '/academic'
+      preLoaderRoute: typeof AcademicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admission': {
+      id: '/admission'
+      path: '/admission'
+      fullPath: '/admission'
+      preLoaderRoute: typeof AdmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/directors': {
+      id: '/directors'
+      path: '/directors'
+      fullPath: '/directors'
+      preLoaderRoute: typeof DirectorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finance': {
+      id: '/finance'
+      path: '/finance'
+      fullPath: '/finance'
+      preLoaderRoute: typeof FinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hr': {
+      id: '/hr'
+      path: '/hr'
+      fullPath: '/hr'
+      preLoaderRoute: typeof HrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marketing': {
+      id: '/marketing'
+      path: '/marketing'
+      fullPath: '/marketing'
+      preLoaderRoute: typeof MarketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/workspace': {
+      id: '/workspace'
+      path: '/workspace'
+      fullPath: '/workspace'
+      preLoaderRoute: typeof WorkspaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcademicRoute: AcademicRoute,
+  AdminRoute: AdminRoute,
+  AdmissionRoute: AdmissionRoute,
+  DirectorsRoute: DirectorsRoute,
+  FinanceRoute: FinanceRoute,
+  HrRoute: HrRoute,
+  MarketingRoute: MarketingRoute,
+  SettingsRoute: SettingsRoute,
+  WorkspaceRoute: WorkspaceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
